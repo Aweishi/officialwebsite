@@ -1,17 +1,25 @@
 @import url("https://fonts.googleapis.com/css?family=PT Sans:200,300,400,500,600,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Arial:200,300,400,500,600,700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=微軟正黑體:wght@100;300;400;500;700;900&display=swap');
 
 
 *{
 	margin:0;
 	padding:0;
 	list-style:none;
-	font-family: 'Noto Sans TC', sans-serif;
+	font-family: '微軟正黑體', sans-serif;
+}
+
+.clearfix{
+	clear: both;
 }
 
 #main_header{
-	width: 1920px;
+	position: fixed;
+	width: 100%;
+	background-color: #fff;
+	z-index: 9999;
 	height: 127px;
 	margin: auto;
 	display: flex;
@@ -144,15 +152,29 @@
 }
 
 
+
+
 .service_item{
-	width: 75%;
-	margin: 6% auto 0 auto;
-	display: flex;
+	/*margin: auto;*/
+	/*margin: 6% 50px 50px auto; */
+	display: inline-block;
+	/*align-items: center;*/
 	text-align: center;
+	/*box-sizing: border-box;*/
+
+	/*box-sizing: border-box;*/
+	padding: 6% 10% 0% 10%;
+	/*padding-top: 6%;
+	padding-left: 10%;*/
+
 }
 
 .service_item li{
-	margin: 0 20px;
+	box-sizing: border-box;
+	padding: 0 1%;
+	width: 25%;
+	float: left;
+	
 }
 
 .service_content{
@@ -213,7 +235,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 115px 0 145px 0;
+	/*padding: 115px 0 145px 0;*/
 	box-sizing: border-box;
 }
 
@@ -235,13 +257,34 @@ footer{
 	text-align: center;
 	padding: 40px 0;
 	background-color: #D3D3D3;
+	margin-top: 55px;
 }
 
 
+@media screen and (min-width:414px) and (max-width:1200px){
+
+	.menu{
+		width: 40%;
+	}
+
+	.menu a{
+		font-size: 18px;
+	}
+
+	.service_item{
+		/*display: flex;*/
+	}
+
+	.service_item li{
+		width: 40%;
+	}
 
 
 
-@media screen and (max-width: 414px){
+}
+
+
+@media screen and (max-width: 800px){
 
 	#main_header{
 		width: 100%;
@@ -281,6 +324,10 @@ footer{
 
 	.close_btn img{
 		width: 50px;
+	}
+
+	.menu{
+		display: none;
 	}
 
 	
@@ -355,11 +402,14 @@ footer{
 	}
 
 	.service_item{
+		display: flex;
+		flex-direction: column;
 		width: 80%;
 		flex-wrap: wrap;
 	}
 
 	.service_item li{
+		width: 100%;
 		margin: 20px 0;
 	}
 
@@ -406,7 +456,7 @@ footer{
 	}
 
 	footer{
-		font-size: 15px;
+		font-size: 13px;
 		padding: 30px 0;
 	}
 

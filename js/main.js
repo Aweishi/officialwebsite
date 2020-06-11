@@ -6,10 +6,18 @@ $(function(){
 	$(".close_btn").on("click",function(){
 		$(".menu_mobile").removeClass("open");
 	})
+
+  $(".btn").on("click",function(){
+    $(".menu_mobile").removeClass("open");
+  })
 })
 
 
 $(document).ready(function(){
+    $(function(){ $('.btn_home').click(function(){ 
+        $('html,body').animate({scrollTop:$('#main_banner').offset().top}, 500);});  
+    }); 
+
     $(function(){ $('.btn_aboutus').click(function(){ 
         $('html,body').animate({scrollTop:$('#aboutus').offset().top}, 500);});  
     }); 
